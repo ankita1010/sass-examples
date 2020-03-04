@@ -57,7 +57,12 @@ body {
     opacity: 1; } }
 
 .animate-header-1 {
-  animation: drop-1 0.7s linear 0s 1 forwards;
+  animation-name: drop-1;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
   font-size: 60px; }
 
 @keyframes drop-2 {
@@ -69,7 +74,12 @@ body {
     opacity: 1; } }
 
 .animate-header-2 {
-  animation: drop-2 0.7s linear 1.7s 1 forwards;
+  animation-name: drop-2;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+  animation-delay: 1.7s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
   font-size: 55px; }
 
 @keyframes drop-3 {
@@ -81,7 +91,12 @@ body {
     opacity: 1; } }
 
 .animate-header-3 {
-  animation: drop-3 0.7s linear 3.4s 1 forwards;
+  animation-name: drop-3;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+  animation-delay: 3.4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
   font-size: 50px; }
 
 @keyframes drop-4 {
@@ -93,5 +108,10 @@ body {
     opacity: 1; } }
 
 .animate-header-4 {
-  animation: drop-4 0.7s linear 5.1s 1 forwards;
+  animation-name: drop-4;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+  animation-delay: 5.1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
   font-size: 45px; }
