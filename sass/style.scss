@@ -8,6 +8,7 @@ body {
 		color: $primary-text;
 		font-family: 'Raleway', sans-serif;
 	}
+
 	nav {
 		font-size: 21px;
 		font-weight: 200;
@@ -19,7 +20,29 @@ body {
 			padding-left: 20px;
 			li{
 				margin-right: 40px;
+				a {
+					text-decoration: none;
+					color: $primary-text;
+					&:hover {
+						color: lighten($color: $primary-text, $amount: 15%);
+						text-decoration: underline;
+					}
+				}
 			}
+		}
+	}
+
+	.main {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		.page-header {
+			@include headers;
+			width: 80vw;
+			min-width: 200px;
+			font-size: 60px;
+			margin-top: 15vh;
+			text-align: center;
 		}
 	}
 }

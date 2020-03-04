@@ -1,5 +1,6 @@
 @mixin nav-styles($height: 60px) {
 	top: 0;
+	position: relative;
 	width: 100vw;
 	max-width: 100vw;
 	height: $height;

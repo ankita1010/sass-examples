@@ -1,12 +1,13 @@
 body {
   margin: 0; }
   body * {
-    color: black;
+    color: #333333;
     font-family: 'Raleway', sans-serif; }
   body nav {
     font-size: 21px;
     font-weight: 200;
     top: 0;
+    position: relative;
     width: 100vw;
     max-width: 100vw;
     height: 60px;
@@ -20,3 +21,21 @@ body {
       padding-left: 20px; }
       body nav ul li {
         margin-right: 40px; }
+        body nav ul li a {
+          text-decoration: none;
+          color: #333333; }
+          body nav ul li a:hover {
+            color: #595959;
+            text-decoration: underline; }
+  body .main {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    body .main .page-header {
+      font-weight: 200;
+      color: #595959;
+      width: 80vw;
+      min-width: 200px;
+      font-size: 60px;
+      margin-top: 15vh;
+      text-align: center; }
