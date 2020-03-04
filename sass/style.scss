@@ -1,48 +1,103 @@
-@import 'variables';
-@import 'navbar';
-@import 'common';
+@import "variables";
+@import "navbar";
+@import "common";
 
 body {
-	margin: 0;
-	* {
-		color: $primary-text;
-		font-family: 'Raleway', sans-serif;
-	}
+  margin: 0;
+  * {
+    color: $primary-text;
+    font-family: "Raleway", sans-serif;
+  }
 
-	nav {
-		font-size: 21px;
-		font-weight: 200;
-		@include nav-styles {
-			border-bottom: $standard-border;
-		};
-		ul {
-			@include common-list;
-			padding-left: 20px;
-			li{
-				margin-right: 40px;
-				a {
-					text-decoration: none;
-					color: $primary-text;
-					&:hover {
-						color: lighten($color: $primary-text, $amount: 15%);
-						text-decoration: underline;
-					}
-				}
-			}
-		}
-	}
+  nav {
+    font-size: 21px;
+    font-weight: 200;
+    @include nav-styles {
+      border-bottom: $standard-border;
+    }
+    ul {
+      @include common-list;
+      padding-left: 20px;
+      li {
+        margin-right: 40px;
+        a {
+          text-decoration: none;
+          color: $primary-text;
+          &:hover {
+            color: lighten($color: $primary-text, $amount: 15%);
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
 
-	.main {
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		.page-header {
-			@include headers;
-			width: 80vw;
-			min-width: 200px;
-			font-size: 60px;
-			margin-top: 15vh;
-			text-align: center;
-		}
-	}
+  .main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .page-header {
+      @include headers;
+      width: 80vw;
+      margin-bottom: 0px;
+      min-width: 200px;
+      font-size: 60px;
+      transform: translateY(0px);
+      opacity: 0;
+      text-align: center;
+      -webkit-perspective: 1000;
+      perspective: 1000;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+  }
 }
+@for $h from 1 through 3 {
+  $header-transition-duration: 0.8s;
+  $delay: $h - 1;
+  @keyframes drop-#{$h} {
+    $initial: $h - 1;
+
+    0% {
+      transform: translateY(10vh + $initial * 2);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(15vh);
+      opacity: 1;
+    }
+  }
+  .animate-header-#{$h} {
+    animation: drop-#{$h}
+      $header-transition-duration
+      linear
+      $header-transition-duration *
+      ($h - 1) +
+      $delay
+      1
+      forwards;
+  }
+}
+
+// @keyframes drop-1 {
+//   0% {
+//     transform: translateY(10vh);
+//     opacity: 0;
+//   }
+//   100% {
+//     transform: translateY(15vh);
+//     opacity: 1;
+//   }
+// }
+// @keyframes drop-2 {
+//   0% {
+//     transform: translateY(12vh);
+//     opacity: 0;
+//   }
+//   100% {
+//     transform: translateY(15vh);
+//     opacity: 1;
+//   }
+// }

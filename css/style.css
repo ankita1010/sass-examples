@@ -2,7 +2,7 @@ body {
   margin: 0; }
   body * {
     color: #333333;
-    font-family: 'Raleway', sans-serif; }
+    font-family: "Raleway", sans-serif; }
   body nav {
     font-size: 21px;
     font-weight: 200;
@@ -30,12 +30,53 @@ body {
   body .main {
     width: 100%;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; }
     body .main .page-header {
       font-weight: 200;
       color: #595959;
       width: 80vw;
+      margin-bottom: 0px;
       min-width: 200px;
       font-size: 60px;
-      margin-top: 15vh;
-      text-align: center; }
+      transform: translateY(0px);
+      opacity: 0;
+      text-align: center;
+      -webkit-perspective: 1000;
+      perspective: 1000;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden; }
+
+@keyframes drop-1 {
+  0% {
+    transform: translateY(10vh);
+    opacity: 0; }
+  100% {
+    transform: translateY(15vh);
+    opacity: 1; } }
+
+.animate-header-1 {
+  animation: drop-1 0.8s linear 0s 1 forwards; }
+
+@keyframes drop-2 {
+  0% {
+    transform: translateY(12vh);
+    opacity: 0; }
+  100% {
+    transform: translateY(15vh);
+    opacity: 1; } }
+
+.animate-header-2 {
+  animation: drop-2 0.8s linear 1.8s 1 forwards; }
+
+@keyframes drop-3 {
+  0% {
+    transform: translateY(14vh);
+    opacity: 0; }
+  100% {
+    transform: translateY(15vh);
+    opacity: 1; } }
+
+.animate-header-3 {
+  animation: drop-3 0.8s linear 3.6s 1 forwards; }
