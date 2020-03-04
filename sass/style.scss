@@ -42,8 +42,9 @@ body {
       @include headers;
       width: 80vw;
       margin-bottom: 0px;
+	  margin-top: 20px;
       min-width: 200px;
-      font-size: 60px;
+    //   font-size: 60px;
       transform: translateY(0px);
       opacity: 0;
       text-align: center;
@@ -54,12 +55,12 @@ body {
     }
   }
 }
-@for $h from 1 through 3 {
-  $header-transition-duration: 0.8s;
+
+@for $h from 1 through 4 {
+  $header-transition-duration: 0.7s;
   $delay: $h - 1;
   @keyframes drop-#{$h} {
     $initial: $h - 1;
-
     0% {
       transform: translateY(10vh + $initial * 2);
       opacity: 0;
@@ -78,26 +79,7 @@ body {
       $delay
       1
       forwards;
+
+	  font-size: 60px - ($delay * 5);
   }
 }
-
-// @keyframes drop-1 {
-//   0% {
-//     transform: translateY(10vh);
-//     opacity: 0;
-//   }
-//   100% {
-//     transform: translateY(15vh);
-//     opacity: 1;
-//   }
-// }
-// @keyframes drop-2 {
-//   0% {
-//     transform: translateY(12vh);
-//     opacity: 0;
-//   }
-//   100% {
-//     transform: translateY(15vh);
-//     opacity: 1;
-//   }
-// }
