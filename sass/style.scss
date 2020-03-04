@@ -1,0 +1,25 @@
+@import 'variables';
+@import 'navbar';
+@import 'common';
+
+body {
+	margin: 0;
+	* {
+		color: $primary-text;
+		font-family: 'Raleway', sans-serif;
+	}
+	nav {
+		font-size: 21px;
+		font-weight: 200;
+		@include nav-styles {
+			border-bottom: $standard-border;
+		};
+		ul {
+			@include common-list;
+			padding-left: 20px;
+			li{
+				margin-right: 40px;
+			}
+		}
+	}
+}

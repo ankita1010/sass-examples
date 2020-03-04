@@ -1,0 +1,22 @@
+body {
+  margin: 0; }
+  body * {
+    color: black;
+    font-family: 'Raleway', sans-serif; }
+  body nav {
+    font-size: 21px;
+    font-weight: 200;
+    top: 0;
+    width: 100vw;
+    max-width: 100vw;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightgray; }
+    body nav ul {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      padding-left: 20px; }
+      body nav ul li {
+        margin-right: 40px; }
